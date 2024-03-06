@@ -107,14 +107,55 @@
 			</figure>
 
 			<p>
+				To create the truthful chart, I wanted a more accurate way to look at allegations over time and across officer ethnicities. Therefore, I downloaded the NYPD headcount data (available at nyc.gov) to figure out how many officers there were of each ethnicity. With this, I created a calculation in Tableau to determine the "allegation rate per officer." To do this correctly, I used a FIXED level of detail expression to calculate my rate separately for each ethnicity and each year.
+			</p>
+
+			<p>
 				Design Decisions and Rationale:
 			</p>
 
-			<ul>
-				<li>RATIONALE_1</li>
-				<li>RATIONALE_2</li>
-				<li>RATIONALE_3</li>
-			</ul>
+			<ol>
+				<li>
+					<strong>Normalizing complaint rates by officer headcount</strong>
+					<ul>
+						<li>Score: 2</li>
+						<li>This chart normalizes the data by showing the arrest allegation rate per officer, based on each officer's ethnicity, across different years. By calculating the rate of complaints, the visualization accurately reflects the likelihood of complaints against officers of different ethnicities, thereby providing a comparison that corrects the deceptive narrative suggested by the raw numbers.</li>
+					</ul>
+				</li>
+
+				<li>
+					<strong>Consistent color scheme with deceptive chart</strong>
+					<ul>
+						<li>Score: 1.5</li>
+						<li>Using the same color scheme as in the deceptive chart maintains consistency, allowing viewers to easily compare and contrast the two charts. This helps in reinforcing the correction of the narrative when viewers see the difference between the raw counts and the normalized rates.</li>
+					</ul>
+				</li>
+
+				<li>
+					<strong>Use of bar charts for easy comparison</strong>
+					<ul>
+						<li>Score: 2</li>
+						<li>Bar charts are effective for comparing quantities and make it easier to see differences in rates between ethnicities across years. This choice helps highlighting the actual disparity in complaints, clearly showing that minority officers are accused at disproportionately higher rates than white officers.</li>
+					</ul>
+				</li>
+
+				<li>
+					<strong>Clear display of trends over time</strong>
+					<ul>
+						<li>Score: 2</li>
+						<li>The layout allows for the comparison of trends over time, demonstrating whether the allegation rates are increasing or decreasing for each ethnicity. The clarity ensures the viewer can draw accurate conclusions from the data over time.
+						</li>
+					</ul>
+				</li>
+
+				<li>
+					<strong>Citywide aggregation instead of precinct-level analysis</strong>
+					<ul>
+						<li>Score: 1.5</li>
+						<li>The decision to aggregate the data for the entire city, rather than breaking it down by precinct, avoids misleading localized patterns and instead provides a broader, more generalized view of complaint rates. This eliminates the potential noise of precinct-specific factors like variable officer deployment sizes or differing neighborhood demographics. As a result, this approach promotes a citywide overview rather than attributing issues to specific precincts.</li>
+					</ul>
+				</li>
+			</ol>
     </section>
 
     <section>
